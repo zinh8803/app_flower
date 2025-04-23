@@ -15,7 +15,17 @@ class SearchScreen extends StatelessWidget {
           return const Center(child: CircularProgressIndicator());
         }
         if (state is SearchError) {
-          return Center(child: Text('Lỗi: ${state.message}'));
+          return Center(
+            child: Text(
+              'Không tìm thấy sản phẩm',
+              style: TextStyle(
+                fontSize: 24,
+                color: Colors.red,
+                fontWeight: FontWeight.bold,
+              ),
+              textAlign: TextAlign.center,
+            ),
+          );
         }
         if (state is SearchLoaded) {
           if (state.products.isEmpty) {

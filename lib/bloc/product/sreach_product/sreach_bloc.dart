@@ -18,7 +18,7 @@ class SearchBloc extends Bloc<SearchEvent, SearchState> {
         final products = await apiService.searchProducts(event.query);
         emit(SearchLoaded(products));
       } catch (e) {
-        emit(SearchError(e.toString()));
+        emit(SearchError('Không thể tìm thấy sản phẩm'));
       }
     });
   }
