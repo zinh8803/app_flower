@@ -10,14 +10,14 @@ class RegisterLink extends StatelessWidget {
       onPressed: () {
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) =>  RegisterPage()),
+          MaterialPageRoute(builder: (context) => RegisterPage()),
         );
       },
       child: const Text(
         "Chưa có tài khoản? Đăng ký ngay",
         style: TextStyle(
           fontSize: 16,
-          color: Colors.deepPurple,
+          color: Colors.green,
           fontWeight: FontWeight.bold,
         ),
       ),

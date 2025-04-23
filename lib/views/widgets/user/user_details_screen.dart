@@ -253,7 +253,7 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                                         );
                                   },
                             style: ElevatedButton.styleFrom(
-                              backgroundColor: Colors.red,
+                              backgroundColor: Colors.green,
                               foregroundColor: Colors.white,
                               minimumSize: const Size(150, 50),
                             ),

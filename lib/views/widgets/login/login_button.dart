@@ -12,7 +12,7 @@ class LoginButton extends StatelessWidget {
       child: ElevatedButton(
         onPressed: onPressed, // ElevatedButton chấp nhận null cho onPressed
         style: ElevatedButton.styleFrom(
-          backgroundColor: Colors.deepPurple,
+          backgroundColor: Colors.green,
           padding: const EdgeInsets.symmetric(vertical: 16),
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),

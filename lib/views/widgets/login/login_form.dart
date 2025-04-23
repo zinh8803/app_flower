@@ -21,18 +21,45 @@ class LoginForm extends StatelessWidget {
           TextFormField(
             controller: emailController,
             decoration: InputDecoration(
-              hintText: 'Email',
-              prefixIcon: const Icon(Icons.email_outlined),
+              labelText: 'Email',
+              hintText: 'Nhập email',
+              prefixIcon: Icon(
+                Icons.email_outlined,
+                color: Colors.green[700],
+                size: 24,
+              ),
+              labelStyle: TextStyle(color: Colors.green[700]),
+              hintStyle: const TextStyle(color: Colors.grey),
               filled: true,
-              fillColor: Colors.white,
-              border:
-                  OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
+              fillColor: Colors.green[50],
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(12),
+                borderSide: BorderSide(color: Colors.green[700]!),
+              ),
+              enabledBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(12),
+                borderSide: BorderSide(color: Colors.green[700]!, width: 1),
+              ),
+              focusedBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(12),
+                borderSide: BorderSide(color: Colors.green[700]!, width: 2),
+              ),
+              errorBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(12),
+                borderSide: BorderSide(color: Colors.red[400]!, width: 1),
+              ),
+              focusedErrorBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(12),
+                borderSide: BorderSide(color: Colors.red[400]!, width: 2),
+              ),
+              errorStyle: TextStyle(color: Colors.red[400], fontSize: 12),
             ),
             validator: (value) {
               if (value == null || value.isEmpty) {
                 return 'Vui lòng nhập email';
               }
-              if (!RegExp(r'^[^@]+@[^@]+\.[^@]+').hasMatch(value)) {
+              if (!RegExp(r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$')
+                  .hasMatch(value)) {
                 return 'Email không hợp lệ';
               }
               return null;
@@ -43,12 +70,38 @@ class LoginForm extends StatelessWidget {
             controller: passwordController,
             obscureText: true,
             decoration: InputDecoration(
-              hintText: 'Password',
-              prefixIcon: const Icon(Icons.lock_outline),
+              labelText: 'Mật khẩu',
+              hintText: 'Nhập mật khẩu',
+              prefixIcon: Icon(
+                Icons.lock_outline,
+                color: Colors.green[700],
+                size: 24,
+              ),
+              labelStyle: TextStyle(color: Colors.green[700]),
+              hintStyle: const TextStyle(color: Colors.grey),
               filled: true,
-              fillColor: Colors.white,
-              border:
-                  OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
+              fillColor: Colors.green[50],
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(12),
+                borderSide: BorderSide(color: Colors.green[700]!),
+              ),
+              enabledBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(12),
+                borderSide: BorderSide(color: Colors.green[700]!, width: 1),
+              ),
+              focusedBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(12),
+                borderSide: BorderSide(color: Colors.green[700]!, width: 2),
+              ),
+              errorBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(12),
+                borderSide: BorderSide(color: Colors.red[400]!, width: 1),
+              ),
+              focusedErrorBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(12),
+                borderSide: BorderSide(color: Colors.red[400]!, width: 2),
+              ),
+              errorStyle: TextStyle(color: Colors.red[400], fontSize: 12),
             ),
             validator: (value) {
               if (value == null || value.isEmpty) {

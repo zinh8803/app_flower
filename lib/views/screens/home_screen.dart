@@ -130,7 +130,7 @@ class _HomeScreenState extends State<HomeScreen> {
         title: SearchBarWidget(onSearch: _onSearch),
         actions: [
           IconButton(
-            icon: const Icon(Icons.shopping_cart, color: Colors.red),
+            icon: const Icon(Icons.card_travel, color: Colors.green),
             onPressed: () {
               Navigator.push(
                 context,
