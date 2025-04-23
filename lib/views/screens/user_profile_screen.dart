@@ -5,8 +5,8 @@ import 'package:frontend_appflowershop/bloc/user/user_profile/user_profile_bloc.
 import 'package:frontend_appflowershop/bloc/user/user_profile/user_profile_event.dart';
 import 'package:frontend_appflowershop/bloc/user/user_profile/user_profile_state.dart';
 import 'package:frontend_appflowershop/data/services/Order/api_order.dart';
-import 'package:frontend_appflowershop/views/screens/Admin/Admin_screens/adminOrderScreen.dart';
 import 'package:frontend_appflowershop/views/screens/login_screen.dart';
+import 'package:frontend_appflowershop/views/screens/order_screen.dart';
 import 'package:frontend_appflowershop/views/widgets/user/change_password_screen.dart';
 import 'package:frontend_appflowershop/views/widgets/user/user_details_screen.dart';
 
@@ -195,7 +195,7 @@ class _UserProfileScreenState extends State<UserProfileScreen> {
                     create: (context) => OrderBloc(
                       context.read<ApiOrderService>(),
                     ),
-                    child: const AdminOrderScreen(),
+                    child: const OrderScreen(),
                   ),
                 ),
               );
